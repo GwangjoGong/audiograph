@@ -103,7 +103,7 @@ export const Login = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="container flex flex-col items-center justify-center">
       <div
         className="w-24 h-24 transition-all duration-700 bg-contain bg-no-repeat bg-center"
         style={{

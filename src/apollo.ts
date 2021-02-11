@@ -11,6 +11,13 @@ export const isLoggedInVar = makeVar(
   Boolean(localStorage.getItem(LOCAL_STORAGE_TOKEN))
 );
 export const jwtTokenVar = makeVar(localStorage.getItem(LOCAL_STORAGE_TOKEN));
+export const musicSourceVar = makeVar({
+  sourceUrl: "",
+  coverImage: "",
+  artist: "",
+  title: "",
+});
+export const modalOpenVar = makeVar(false);
 
 const httpLink = createHttpLink({
   uri: "http://54.180.223.40:3000/graphql",
@@ -39,6 +46,11 @@ const client = new ApolloClient({
           token: {
             read() {
               return jwtTokenVar();
+            },
+          },
+          music: {
+            read() {
+              return musicSourceVar();
             },
           },
         },

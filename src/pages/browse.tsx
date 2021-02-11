@@ -1,5 +1,87 @@
+import { gql, useQuery } from "@apollo/client";
+import { BuyModal } from "../components/buy-modal";
+import { InvestingMusic } from "../components/investing-music";
+import { getRecentMusics } from "../__generated__/getRecentMusics";
+import { getTrendingMusics } from "../__generated__/getTrendingMusics";
+
+const GET_TRENDING_MUSICS = gql`
+  query getTrendingMusics {
+    getTrendingMusics {
+      ok
+      error
+      musics {
+        id
+        title
+        artist
+        coverImage
+        sourceUrl
+        composer
+        arranger
+        lyricist
+        token {
+          stock
+          totalStock
+          recentPrice
+          initialPrice
+          status
+        }
+      }
+    }
+  }
+`;
+
+const GET_RECENT_MUSICS = gql`
+  query getRecentMusics {
+    getRecentMusics {
+      ok
+      error
+      musics {
+        id
+        title
+        artist
+        coverImage
+        sourceUrl
+        composer
+        arranger
+        lyricist
+        token {
+          stock
+          totalStock
+          recentPrice
+          initialPrice
+          status
+        }
+      }
+    }
+  }
+`;
+
 export const Browse = () => {
+  const { data: trendingMusicsData } = useQuery<getTrendingMusics>(
+    GET_TRENDING_MUSICS
+  );
+  const { data: recentMusicsData } = useQuery<getRecentMusics>(
+    GET_RECENT_MUSICS
+  );
   return (
-    <div>Browse</div>
-  )
-}
+    <div className="container overflow-auto relative">
+      <div className="w-full">
+        <h2 className="mt-3 font-medium text-xl">browse</h2>
+
+        <div className="mt-3 shadow-drop rounded-md py-5 px-4">
+          <div className="text-sm mb-3">top trending</div>
+          {trendingMusicsData?.getTrendingMusics.musics?.map((music) => (
+            <InvestingMusic music={music} key={music.id} />
+          ))}
+        </div>
+        <div className="mt-12 shadow-drop rounded-md  py-5 px-4">
+          <div className="text-sm mb-3">new arrivals</div>
+          {recentMusicsData?.getRecentMusics.musics?.map((music) => (
+            <InvestingMusic music={music} key={music.id} />
+          ))}
+        </div>
+      </div>
+      <BuyModal />
+    </div>
+  );
+};
