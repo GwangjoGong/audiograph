@@ -1,4 +1,14 @@
 @tailwind base;
 @tailwind components;
+.input {
+  @apply focus:outline-none text-xs ring-1 ring-black focus:ring-opacity-80 ring-opacity-20 px-5 py-2 transition-all;
+}
 
+.btn {
+  @apply px-5 py-2 text-xs text-white bg-purple-600 focus:outline-none hover:bg-purple-900 transition-all duration-700;
+}
+
+.btn:disabled {
+  @apply bg-gray-200;
+}
 @tailwind utilities;
