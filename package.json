@@ -42,7 +42,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "codegen": "rm -rf src/__generated__ && apollo client:codegen src/__generated__ --target=typescript --outputFlat",
-    "deploy": "aws s3 sync ./build s3://audiograph"
+    "deploy": "yarn build && aws s3 sync ./build s3://audiograph"
   },
   "eslintConfig": {
     "extends": [
