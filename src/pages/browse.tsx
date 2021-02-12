@@ -3,6 +3,7 @@ import { BuyModal } from "../components/buy-modal";
 import { InvestingMusic } from "../components/investing-music";
 import { getRecentMusics } from "../__generated__/getRecentMusics";
 import { getTrendingMusics } from "../__generated__/getTrendingMusics";
+import { LogoutButton } from "../components/logout-btn";
 
 const GET_TRENDING_MUSICS = gql`
   query getTrendingMusics {
@@ -66,7 +67,10 @@ export const Browse = () => {
   return (
     <div className="container overflow-auto relative">
       <div className="w-full">
-        <h2 className="mt-3 font-medium text-xl">browse</h2>
+        <div className="w-full flex justify-between items-center mt-3">
+          <h2 className="font-medium text-xl">browse</h2>
+          <LogoutButton />
+        </div>
 
         <div className="mt-3 shadow-drop rounded-md py-5 px-4">
           <div className="text-sm mb-3">top trending</div>

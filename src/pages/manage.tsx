@@ -6,6 +6,7 @@ import { getAccountBalance } from "../__generated__/getAccountBalance";
 import { getMyInvestments } from "../__generated__/getMyInvestments";
 import { useEffect, useState } from "react";
 import { ManagedMusic } from "../components/managed-music";
+import { LogoutButton } from "../components/logout-btn";
 
 export type InvestedMusic = {
   id: number;
@@ -78,7 +79,10 @@ export const Manage = () => {
   return (
     <div className="container overflow-auto relative">
       <div className="w-full">
-        <h2 className="mt-3 font-medium text-xl">manage</h2>
+        <div className="w-full flex justify-between items-center mt-3">
+          <h2 className="ont-medium text-xl">manage</h2>
+          <LogoutButton />
+        </div>
         <div className="mt-3 shadow-mini rounded-md py-5 px-4 text-center">
           <div className="text-sm font-medium text-purple-600 mb-3">
             Total Asset
