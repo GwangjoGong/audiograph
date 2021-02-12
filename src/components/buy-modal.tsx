@@ -41,7 +41,7 @@ const GET_MUSIC_QUERY = gql`
   }
 `;
 
-const GET_ACCOUNT_BALANCE = gql`
+export const GET_ACCOUNT_BALANCE = gql`
   query getAccountBalance {
     getAccountBalance {
       ok

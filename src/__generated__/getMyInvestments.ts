@@ -14,6 +14,7 @@ export interface getMyInvestments_getMyInvestments_music_token {
 
 export interface getMyInvestments_getMyInvestments_music {
   __typename: "Music";
+  id: number;
   title: string;
   coverImage: string;
   sourceUrl: string;

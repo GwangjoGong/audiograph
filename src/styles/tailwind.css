@@ -42,7 +42,7 @@ html {
 }
 
 .container {
-  @apply w-full max-w-screen-sm mx-auto h-screen p-3;
+  @apply w-full max-w-screen-sm mx-auto h-screen p-3 pb-16;
 }
 
 .input {
