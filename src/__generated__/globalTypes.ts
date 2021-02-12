@@ -18,6 +18,15 @@ export interface CreateAccountInput {
   password: string;
 }
 
+export interface CreateInvestmentInput {
+  amount: number;
+  musicId: number;
+}
+
+export interface GetMusicInput {
+  id: number;
+}
+
 export interface LoginInput {
   email: string;
   password: string;

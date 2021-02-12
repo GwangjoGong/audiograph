@@ -29,6 +29,7 @@
     "react-modal": "^3.12.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-simple-range": "^2.0.0",
     "tailwindcss": "^2.0.2",
     "typescript": "^4.0.3",
     "use-timer": "^2.0.1",
@@ -40,7 +41,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "codegen": "rm -rf src/__generated__ && apollo client:codegen src/__generated__ --target=typescript --outputFlat"
+    "codegen": "rm -rf src/__generated__ && apollo client:codegen src/__generated__ --target=typescript --outputFlat",
+    "deploy": "aws s3 sync ./build s3://audiograph"
   },
   "eslintConfig": {
     "extends": [

@@ -55,6 +55,8 @@ export const MusicPlayer = () => {
     <div
       className={`w-full absolute left-0 ${
         music.sourceUrl !== "" ? "bottom-24" : "bottom-gone"
+      } ${
+        music.sourceUrl !== "" ? "" : "h-0 overflow-hidden"
       } transition-all duration-700`}
     >
       <div className="shadow-mini rounded-md flex mx-3 bg-white">

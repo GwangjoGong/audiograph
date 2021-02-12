@@ -598,6 +598,50 @@ html {
   font-size: 14px;
 }
 
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #632eb9;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #e6e6e6;
+  border-radius: 4px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: yellow;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: #632eb9;
+  height: 8px;
+}
+
 .ReactModal__Overlay {
   opacity: 0;
   transform: translateX(-100px);
@@ -702,11 +746,6 @@ html {
 .btn:disabled {
   --tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
-}
-
-.shadow-drop {
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]){

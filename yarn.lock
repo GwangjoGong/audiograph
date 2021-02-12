@@ -10671,6 +10671,11 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
 
+react-simple-range@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-simple-range/-/react-simple-range-2.0.0.tgz#3dc5c11f5f688b2ad267437eb35dc0e38c4e2d24"
+  integrity sha512-6rUvhIKHctjR2W4jWXUvl4OPEPZT5bB9CcxD9Zd8/abHeNsZuRCB/XCGSE8m2g+2u1bkMHQ1kpJWEjFMuQUFkw==
+
 react@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"

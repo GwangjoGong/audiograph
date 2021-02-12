@@ -18,6 +18,7 @@ export const musicSourceVar = makeVar({
   title: "",
 });
 export const modalOpenVar = makeVar(false);
+export const buyMusicVar = makeVar(-1);
 
 const httpLink = createHttpLink({
   uri: "http://54.180.223.40:3000/graphql",

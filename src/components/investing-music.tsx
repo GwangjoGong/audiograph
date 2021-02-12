@@ -2,7 +2,7 @@ import { React } from "@ungap/global-this";
 import { getTrendingMusics_getTrendingMusics_musics } from "../__generated__/getTrendingMusics";
 import chevronRight from "../assets/chevron-right.svg";
 import { useState } from "react";
-import { modalOpenVar, musicSourceVar } from "../apollo";
+import { buyMusicVar, modalOpenVar, musicSourceVar } from "../apollo";
 
 interface IProps {
   music: getTrendingMusics_getTrendingMusics_musics;
@@ -27,6 +27,7 @@ export const InvestingMusic: React.FC<IProps> = ({ music }) => {
   };
 
   const openModal = () => {
+    buyMusicVar(music.id);
     modalOpenVar(true);
   };
 
@@ -106,7 +107,7 @@ export const InvestingMusic: React.FC<IProps> = ({ music }) => {
             className="btn w-20 text-center rounded-sm px-auto"
             onClick={openModal}
           >
-            BUY
+            INVEST
           </div>
         </div>
       </div>
