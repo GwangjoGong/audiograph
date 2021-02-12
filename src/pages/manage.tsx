@@ -77,7 +77,10 @@ export const Manage = () => {
   }, [investmentData]);
 
   return (
-    <div className="container overflow-auto relative">
+    <div
+      className="container overflow-auto relative "
+      style={{ height: `${window.innerHeight}px` }}
+    >
       <div className="w-full">
         <div className="w-full flex justify-between items-center mt-3">
           <h2 className="ont-medium text-xl">manage</h2>

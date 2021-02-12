@@ -27,7 +27,10 @@ export const Play = () => {
   const { data } = useQuery<getMyInvestments>(MY_INVESTMENTS_QUERY);
 
   return (
-    <div className="container overflow-auto relative">
+    <div
+      className="container overflow-auto relative"
+      style={{ height: `${window.innerHeight}px` }}
+    >
       <div className="w-full">
         <div className="w-full flex justify-between items-center mt-3">
           <h2 className="font-medium text-xl">play</h2>

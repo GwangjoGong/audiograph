@@ -625,7 +625,6 @@ html {
 }
 
 .container {
-  height: 100vh;
   margin-left: auto;
   margin-right: auto;
   max-width: 640px;

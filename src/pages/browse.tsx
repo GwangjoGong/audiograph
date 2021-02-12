@@ -65,7 +65,10 @@ export const Browse = () => {
     GET_RECENT_MUSICS
   );
   return (
-    <div className="container overflow-auto relative">
+    <div
+      className="container overflow-auto relative"
+      style={{ height: `${window.innerHeight}px` }}
+    >
       <div className="w-full">
         <div className="w-full flex justify-between items-center mt-3">
           <h2 className="font-medium text-xl">browse</h2>
