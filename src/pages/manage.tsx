@@ -83,7 +83,7 @@ export const Manage = () => {
     >
       <div className="w-full">
         <div className="w-full flex justify-between items-center mt-3">
-          <h2 className="ont-medium text-xl">manage</h2>
+          <h2 className="font-medium text-xl">manage</h2>
           <LogoutButton />
         </div>
         <div className="mt-3 shadow-mini rounded-md py-5 px-4 text-center">
