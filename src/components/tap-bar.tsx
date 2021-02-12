@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import browseIcon from "../assets/browse.svg";
 import manageIcon from "../assets/manage.svg";
@@ -5,6 +6,11 @@ import playIcon from "../assets/play.svg";
 
 export const TapBar = () => {
   const { pathname } = useLocation();
+  const [key, setKey] = useState(pathname);
+
+  useEffect(() => {
+    setKey(pathname);
+  }, [pathname]);
 
   return (
     <div className="absolute bottom-0 left-0 w-full h-16 shadow-tapbar bg-white">
@@ -16,7 +22,9 @@ export const TapBar = () => {
           <img
             src={browseIcon}
             alt="link"
-            style={{ filter: `${pathname !== "/browse" && "grayscale(1)"} ` }}
+            style={{
+              filter: `${key !== "/browse" ? "grayscale(1)" : "none"} `,
+            }}
           />
         </Link>
 
@@ -27,7 +35,7 @@ export const TapBar = () => {
           <img
             src={playIcon}
             alt="link"
-            style={{ filter: `${pathname !== "/play" && "grayscale(1)"} ` }}
+            style={{ filter: `${key !== "/play" ? "grayscale(1)" : "none"} ` }}
           />
         </Link>
 
@@ -38,7 +46,9 @@ export const TapBar = () => {
           <img
             src={manageIcon}
             alt="link"
-            style={{ filter: `${pathname !== "/manage" && "grayscale(1)"} ` }}
+            style={{
+              filter: `${key !== "/manage" ? "grayscale(1)" : "none"} `,
+            }}
           />
         </Link>
       </div>
