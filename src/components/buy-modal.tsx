@@ -134,6 +134,7 @@ export const BuyModal = () => {
       style={{
         content: {
           maxWidth: "640px",
+          minWidth: "320px",
           height: "fit-content",
           top: "50%",
           left: "50%",
