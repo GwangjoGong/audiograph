@@ -103,7 +103,10 @@ export const Login = () => {
   };
 
   return (
-    <div className="container flex flex-col items-center justify-center">
+    <div
+      className="container flex flex-col items-center justify-center"
+      style={{ height: `${window.innerHeight}px` }}
+    >
       <div
         className="w-24 h-24 transition-all duration-700 bg-contain bg-no-repeat bg-center"
         style={{
