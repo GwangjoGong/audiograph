@@ -35,7 +35,6 @@ const CREATE_ACCOUNT_MUTATION = gql`
 
 interface IForm {
   email: string;
-  password: string;
 }
 
 export const Login = () => {
@@ -72,7 +71,7 @@ export const Login = () => {
         variables: {
           input: {
             email: watch().email,
-            password: watch().password,
+            password: watch().email,
           },
         },
       });
@@ -95,7 +94,7 @@ export const Login = () => {
         variables: {
           input: {
             email: watch().email,
-            password: watch().password,
+            password: watch().email,
           },
         },
       });
@@ -115,8 +114,10 @@ export const Login = () => {
         }}
       />
       <h2 className="mt-2 font-medium text-lg opacity-80">Audiograph</h2>
-      <div className="h-72 flex items-end">
+      <div className="h-60 flex items-end">
         <form className="grid gap-5" onSubmit={handleSubmit(onSubmit)}>
+          <h3 className="font-medium">Welcome</h3>
+
           <input
             ref={register({
               required: "Email is required",
@@ -130,19 +131,10 @@ export const Login = () => {
           {errors.email?.message && (
             <FormError errorMessage={errors.email?.message} />
           )}
-          <input
-            ref={register({
-              required: "Password is required",
-            })}
-            className="input mb-2"
-            name="password"
-            required
-            type="password"
-            placeholder="Password"
-          />
-          {errors.password?.message && (
-            <FormError errorMessage={errors.password?.message} />
-          )}
+          <h4 className="text-xs opacity-40">
+            Don't worry.
+            <br /> Data will be deleted after hackathon.
+          </h4>
           <Button
             canClick={isValid}
             actionText="Get Started"
