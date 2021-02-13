@@ -103,7 +103,7 @@ export const Manage = () => {
         <div className="mt-3 shadow-drop rounded-md py-5 px-4">
           <div className="text-sm mb-3">investments</div>
           {investments.map((i) => (
-            <ManagedMusic music={i} />
+            <ManagedMusic key={i.id} music={i} />
           ))}
         </div>
       </div>
